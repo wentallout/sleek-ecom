@@ -9,16 +9,16 @@
 </script>
 
 <footer class="g-container">
-	<div class="">Be the first to know about our special offers</div>
-
-	<form class="flex w-full max-w-sm items-center space-x-2">
-		<Input type="email" placeholder="email" />
-		<Button type="submit">Subscribe</Button>
-	</form>
-
 	<div>insert social icon here</div>
 
 	<section class="grid">
+		<div class="">
+			<div class="">Be the first to know about our special offers</div>
+			<form class="flex w-full max-w-sm items-center space-x-2">
+				<Input type="email" placeholder="email" />
+				<Button type="submit">Subscribe</Button>
+			</form>
+		</div>
 		<div class="flex flex-col">
 			<h5 class="font-semibold">Help</h5>
 			<a href="#">Track order</a>
@@ -80,7 +80,7 @@
 <style>
 	.grid {
 		--min: 20ch;
-		--gap: 1rem;
+		--gap: 3rem;
 
 		display: grid;
 		grid-gap: var(--gap);
