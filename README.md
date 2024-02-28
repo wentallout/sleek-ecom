@@ -2,6 +2,10 @@
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
+## Icons
+
+Phosphor - Browse Collection: https://icon-sets.iconify.design/ph
+
 ## Auth
 
 https://supabase.com/docs/guides/auth/server-side/migrating-to-ssr-from-auth-helpers?framework=sveltekit

@@ -1,0 +1,3 @@
+<div class="flex h-[24px] items-center justify-center bg-black px-4 py-2 text-white">
+	<slot />
+</div>

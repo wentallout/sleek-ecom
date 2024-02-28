@@ -1,8 +1,13 @@
 <script>
 	import Promo from '$lib/components/sections/navbar/promo.svelte';
+	import List from '~icons/ph/list';
 </script>
 
 <Promo />
-<header>
-	<div class=""></div>
+<header class="g-container flex flex-row">
+	<List />
+	<div class="">SLEEK</div>
+	<div class="">search</div>
+	<div class="">love</div>
+	<div class="">cart</div>
 </header>

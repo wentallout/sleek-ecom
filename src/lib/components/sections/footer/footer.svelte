@@ -1,5 +1,5 @@
 <script>
-	import Input from '../../ui/input/input.svelte';
+	import Input from '$lib/components/ui/input/input.svelte';
 	import Copyright from '$lib/components/sections/footer/copyright.svelte';
 
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
