@@ -10,8 +10,11 @@ const config = {
 			runtime: 'edge'
 		}),
 		alias: {
-			utils: '$lib/utils',
-			components: '$lib/components'
+			$utils: './src/lib/utils',
+			$components: './src/lib/components',
+			$sections: './src/lib/sections',
+			$images: './src/assets/images',
+			$icons: './src/assets/icons'
 		}
 	}
 };

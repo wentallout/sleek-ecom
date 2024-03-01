@@ -1,13 +1,16 @@
 <script lang="ts">
-	import ThemeDropdown from '$lib/components/ui/theme/theme-dropdown.svelte';
-	import Footer from '$lib/components/sections/footer/footer.svelte';
-	import Navbar from '$lib/components/sections/navbar/navbar.svelte';
+	
+	import Footer from '$sections/footer/footer.svelte';
+	import Navbar from '$sections/navbar/navbar.svelte';
 	import '../app.pcss';
 	import { ModeWatcher } from 'mode-watcher';
+
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	injectSpeedInsights();
 </script>
 
-<!-- <ModeWatcher />
-<ThemeDropdown /> -->
+<ModeWatcher defaultMode="light" />
+
 <Navbar />
 
 <main class="min-h-svh">

@@ -2,6 +2,8 @@ export type Product = {
 	name: string;
 	brand: string;
 	price: number;
-	isHot: boolean;
-	isNew: boolean;
+	thumbnailUrl: string;
+	discountPercent?: number;
+	isHot?: boolean;
+	isNew?: boolean;
 };
