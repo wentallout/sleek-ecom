@@ -11,7 +11,7 @@
 		class="relative col-span-2 h-[400px] w-auto overflow-hidden rounded-[--radius] md:col-span-2"
 	>
 		<img class="h-[400px] w-full object-cover" src={sale1} alt="" />
-		<div class="absolute bottom-0 left-0 w-full bg-black text-white">
+		<div class="absolute bottom-0 left-0 w-full bg-black px-3 py-2 text-white">
 			<h2 class="text-lg font-semibold">Another marketing message</h2>
 			<p>Lorem ipsum dolor</p>
 		</div>
@@ -19,14 +19,14 @@
 	<div class="relative col-span-1 h-[400px] overflow-hidden rounded-[--radius] md:col-span-1">
 		<img class="h-full w-full object-cover" src={sale2} alt="" />
 
-		<div class="absolute bottom-0 left-0 w-full bg-black text-white">
+		<div class="absolute bottom-0 left-0 w-full bg-black px-3 py-2 text-white">
 			<h2>Up to 50% off on accessories</h2>
 			<Button>Shop Now</Button>
 		</div>
 	</div>
 	<div class="relative col-span-1 h-[400px] overflow-hidden rounded-[--radius] md:col-span-1">
 		<img class="h-full w-full object-cover" src={sale3} alt="pregnant mums" />
-		<div class="absolute bottom-0 left-0 w-full bg-black text-white">
+		<div class="absolute bottom-0 left-0 w-full bg-black px-3 py-2 text-white">
 			<h2>Up to 30% off on clothing for future mums</h2>
 			<Button>Shop Now</Button>
 		</div>

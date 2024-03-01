@@ -7,6 +7,7 @@
 	import MarketingBanner from '$lib/components/sections/home/marketing-banner.svelte';
 	import GetTheLook from '$lib/components/sections/home/get-the-look.svelte';
 	import PicksForYou from '$lib/components/sections/home/picks-for-you.svelte';
+	import StoreHighlight from '$lib/components/sections/home/store-highlight.svelte';
 </script>
 
 <Hero />
@@ -16,3 +17,4 @@
 <MarketingBanner />
 <GetTheLook />
 <PicksForYou />
+<StoreHighlight />
