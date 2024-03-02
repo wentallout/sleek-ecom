@@ -1,5 +1,4 @@
 <script lang="ts">
-	
 	import Footer from '$sections/footer/footer.svelte';
 	import Navbar from '$sections/navbar/navbar.svelte';
 	import '../app.pcss';

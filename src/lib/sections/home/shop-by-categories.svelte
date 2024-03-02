@@ -1,12 +1,12 @@
 <script>
 	import CategoryCard from '$components/ui/product/category-card.svelte';
-	import CategoryClothing from '$images/category-clothing.jpg';
+	import CategoryClothing from '$images/category-clothing.webp';
 
-	import CategoryShoes from '$images/category-shoes.jpg';
+	import CategoryShoes from '$images/category-shoes.webp';
 
-	import CategorySportwear from '$images/category-sportwear.jpg';
+	import CategorySportwear from '$images/category-sportwear.webp';
 
-	import CategoryAcc from '$images/category-acc.jpg';
+	import CategoryAcc from '$images/category-acc.webp';
 
 	import ArrowRight from '~icons/ph/arrow-right';
 	import HeadingWithShowAll from '$components/ui/heading/heading-with-show-all.svelte';
@@ -16,7 +16,7 @@
 
 <section class="g-container mb-28">
 	<HeadingWithShowAll headingText="Categories" />
-	<div class="grid">
+	<div class="grid gap-4">
 		<a href="/" class="flex flex-col items-center justify-center rounded bg-blue-200">
 			<div class="text-2xl font-semibold text-blue-700">All Categories</div>
 			<div class="flex flex-row gap-2 text-blue-700">
@@ -34,11 +34,10 @@
 
 <style>
 	.grid {
-		--min: 24ch;
-		--gap: 1rem;
+		--min: 20ch;
 
 		display: grid;
-		grid-gap: var(--gap);
+
 		/* min() with 100% prevents overflow
   in extra narrow spaces */
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import banner1 from '$images/banner1.jpg';
+	import banner1 from '$images/banner1.webp';
 
 	import { ArrowRight } from '$icons';
 </script>

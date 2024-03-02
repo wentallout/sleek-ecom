@@ -15,8 +15,8 @@
 </script>
 
 <div class="flex flex-col overflow-hidden">
-	<div class="relative mb-2 h-[240px] w-auto md:h-[458px]">
-		<img class="h-full w-auto rounded object-cover" src={product.thumbnailUrl} alt="" />
+	<div class="relative mb-2 h-[300px] w-full md:h-[458px]">
+		<img class="h-full w-full rounded object-cover" src={product.thumbnailUrl} alt="" />
 		<div class="absolute bottom-1 left-1 flex flex-row flex-nowrap gap-1">
 			{#if product.isNew}
 				<ProductBadge>NEW</ProductBadge>

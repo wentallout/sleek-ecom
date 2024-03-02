@@ -1,9 +1,9 @@
 <script>
 	import Button from '$lib/components/ui/button/button.svelte';
 
-	import sale1 from '$images/sale1.jpg';
-	import sale2 from '$images/sale2.jpg';
-	import sale3 from '$images/sale3.jpg';
+	import sale1 from '$images/sale1.webp';
+	import sale2 from '$images/sale2.webp';
+	import sale3 from '$images/sale3.webp';
 </script>
 
 <section class="g-container mb-24 grid auto-rows-auto gap-4 rounded md:grid-cols-4">

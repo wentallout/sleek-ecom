@@ -4,10 +4,9 @@
 	import Autoplay from 'embla-carousel-autoplay';
 
 	import type { Product } from '$lib/types/Product';
-	import product1 from '$images/product1.png';
-	import product2 from '$images/product2.png';
-	import product3 from '$images/product3.png';
-
+	import product1 from '$images/product1.webp';
+	import product2 from '$images/product2.webp';
+	import product3 from '$images/product3.webp';
 
 	export let products: Product[] = [
 		{
@@ -63,8 +62,7 @@
 			discountPercent: 30,
 			isNew: false,
 			isHot: true
-		},
-		
+		}
 	];
 
 	const plugin = Autoplay({ delay: 2000, stopOnInteraction: true });
