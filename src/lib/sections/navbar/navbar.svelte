@@ -1,16 +1,31 @@
 <script lang="ts">
 	import Button from '$components/ui/button/button.svelte';
 	import Input from '$components/ui/input/input.svelte';
-	import { List, MagnifyingGlass, Heart, ShoppingCart, User } from '$icons';
+	import {
+		List,
+		MagnifyingGlass,
+		Heart,
+		ShoppingCart,
+		User,
+		Dress,
+		All,
+		Shorts,
+		Blazer
+	} from '$icons';
 	import Promo from '$sections/navbar/promo.svelte';
-	import { fade, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 	let currentHoveredCategory: string = '';
 
 	import NextSeason from '$images/next-season.png';
 	import MegaMenuItem from './mega-menu-item.svelte';
 
-	import { ArrowRight, Conscious, Trousers, Skirt } from '$icons';
+	import { ArrowRight, Conscious, Trousers, Skirt, Lingerie, Sale, Tshirt } from '$icons';
 	import Store from '$icons/nav/store.svelte';
+
+	import NightOut from '$images/night-out.png';
+	import Modest from '$images/modest.png';
+
+	import Office from '$images/office.png';
 </script>
 
 <Promo />
@@ -68,13 +83,21 @@
 					<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
 						<div class="flex flex-col gap-2">
 							<h2 class="text-lg font-semibold">Clothing categories</h2>
-							<MegaMenuItem>All in clothing</MegaMenuItem>
+							<MegaMenuItem>
+								<All />
+								All clothing</MegaMenuItem>
 							<MegaMenuItem>New in Clothing</MegaMenuItem>
 							<MegaMenuItem>Shirts & Tops</MegaMenuItem>
-							<MegaMenuItem>T-Shirts</MegaMenuItem>
-							<MegaMenuItem>Shorts</MegaMenuItem>
+							<MegaMenuItem>
+								<Tshirt />
+								T-Shirts</MegaMenuItem>
+							<MegaMenuItem>
+								<Shorts />
+								Shorts</MegaMenuItem>
 							<MegaMenuItem>Swimwear & Beachwear</MegaMenuItem>
-							<MegaMenuItem>Blazers</MegaMenuItem>
+							<MegaMenuItem>
+								<Blazer />
+								Blazers</MegaMenuItem>
 							<MegaMenuItem>Hoodies & Sweatshirts</MegaMenuItem>
 							<MegaMenuItem>Coats & Jackets</MegaMenuItem>
 						</div>
@@ -87,16 +110,34 @@
 								<Skirt />
 								Skirts
 							</MegaMenuItem>
-							<MegaMenuItem>Dresses</MegaMenuItem>
-							<MegaMenuItem>Lingerie</MegaMenuItem>
-							<MegaMenuItem>On sale</MegaMenuItem>
+							<MegaMenuItem>
+								<Dress />
+								Dresses
+							</MegaMenuItem>
+							<MegaMenuItem>
+								<Lingerie />
+								Lingerie
+							</MegaMenuItem>
+							<MegaMenuItem>
+								<Sale />
+								On sale
+							</MegaMenuItem>
 						</div>
 
 						<div class="flex flex-col gap-2">
 							<h2 class="text-lg font-semibold">Style</h2>
-							<MegaMenuItem>Night out</MegaMenuItem>
-							<MegaMenuItem>Office</MegaMenuItem>
-							<MegaMenuItem>Modest</MegaMenuItem>
+							<MegaMenuItem>
+								<img class="h-12 w-12 rounded-full object-cover" src={NightOut} alt="" />
+								Night out
+							</MegaMenuItem>
+							<MegaMenuItem>
+								<img class="h-12 w-12 rounded-full object-cover" src={Office} alt="" />
+								Office
+							</MegaMenuItem>
+							<MegaMenuItem>
+								<img class="h-12 w-12 rounded-full object-cover" src={Modest} alt="" />
+								Modest
+							</MegaMenuItem>
 
 							<h2 class="text-lg font-semibold">Fit</h2>
 							<MegaMenuItem>Maternity</MegaMenuItem>
