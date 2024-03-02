@@ -1,6 +1,14 @@
 <script lang="ts">
 	import Button from '$components/ui/button/button.svelte';
 	import Input from '$components/ui/input/input.svelte';
+
+	import Promo from '$sections/navbar/promo.svelte';
+	import { slide } from 'svelte/transition';
+	let currentHoveredCategory: string = '';
+
+	import NextSeason from '$images/next-season.png';
+	import MegaMenuItem from './mega-menu-item.svelte';
+
 	import {
 		List,
 		MagnifyingGlass,
@@ -10,28 +18,30 @@
 		Dress,
 		All,
 		Shorts,
-		Blazer
+		Blazer,
+		Shirt,
+		ArrowRight,
+		Conscious,
+		Trousers,
+		Skirt,
+		Lingerie,
+		Sale,
+		Tshirt,
+		StarFour,
+		Coat,
+		Hoodie,
+		Store
 	} from '$icons';
-	import Promo from '$sections/navbar/promo.svelte';
-	import { slide } from 'svelte/transition';
-	let currentHoveredCategory: string = '';
-
-	import NextSeason from '$images/next-season.png';
-	import MegaMenuItem from './mega-menu-item.svelte';
-
-	import { ArrowRight, Conscious, Trousers, Skirt, Lingerie, Sale, Tshirt } from '$icons';
-	import Store from '$icons/nav/store.svelte';
 
 	import NightOut from '$images/night-out.png';
 	import Modest from '$images/modest.png';
-
 	import Office from '$images/office.png';
 </script>
 
 <Promo />
 <header
-	class="relative top-0 z-50 mb-5 border border-solid border-b-border bg-background pb-0 pt-3 shadow-sm">
-	<div class="g-container flex flex-row justify-between">
+	class="sticky top-0 z-50 mb-5 border border-solid border-b-border bg-background pb-0 pt-3 shadow-sm">
+	<div class="container flex flex-row justify-between">
 		<div class="flex flex-row items-center gap-2">
 			<Button class="block md:hidden" variant="outline">
 				<List width="24" height="24" />
@@ -60,15 +70,30 @@
 			</Button>
 		</div>
 	</div>
-	<div class="g-container flex w-full flex-row flex-wrap gap-4">
-		<a on:mouseenter={() => (currentHoveredCategory = 'Clothing')} class="py-3" href="/"
+	<div class="container flex w-full flex-row flex-wrap gap-4">
+		<a
+			on:mouseenter={() => (currentHoveredCategory = 'Clothing')}
+			class="py-3 hover:bg-accent"
+			href="/"
 			>Clothing
 		</a>
-		<a on:mouseenter={() => (currentHoveredCategory = 'Shoes')} class="py-3" href="/">Shoes</a>
-		<a on:mouseenter={() => (currentHoveredCategory = 'Accessories')} class="py-3" href="/"
-			>Accessories</a>
-		<a class="py-3" href="/">Bestsellers</a>
-		<a class="py-3" href="/">Promos</a>
+		<a
+			on:mouseenter={() => (currentHoveredCategory = 'Shoes')}
+			class="py-3 hover:bg-accent"
+			href="/">Shoes</a>
+		<a
+			on:mouseenter={() => (currentHoveredCategory = 'Accessories')}
+			class="py-3 hover:bg-accent"
+			href="/">Accessories</a>
+		<a
+			on:mouseenter={() => (currentHoveredCategory = 'Bestsellers')}
+			class="py-3 hover:bg-accent"
+			href="/">
+			Bestsellers</a>
+		<a
+			on:mouseenter={() => (currentHoveredCategory = 'Promos')}
+			class="py-3 hover:bg-accent"
+			href="/">Promos</a>
 	</div>
 
 	{#if currentHoveredCategory !== ''}
@@ -78,28 +103,40 @@
 			transition:slide
 			on:mouseleave={() => (currentHoveredCategory = '')}
 			class="absolute left-0 top-[100%] z-50 w-full bg-background bg-opacity-80 py-6 shadow-md backdrop-blur-lg">
-			<div class="g-container">
+			<div class="container">
 				{#if currentHoveredCategory === 'Clothing'}
 					<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
 						<div class="flex flex-col gap-2">
 							<h2 class="text-lg font-semibold">Clothing categories</h2>
 							<MegaMenuItem>
 								<All />
-								All clothing</MegaMenuItem>
-							<MegaMenuItem>New in Clothing</MegaMenuItem>
-							<MegaMenuItem>Shirts & Tops</MegaMenuItem>
+								All clothing
+							</MegaMenuItem>
+							<MegaMenuItem>
+								<StarFour />
+								New in Clothing
+							</MegaMenuItem>
+							<MegaMenuItem>
+								<Shirt />
+								Shirts & Tops</MegaMenuItem>
 							<MegaMenuItem>
 								<Tshirt />
 								T-Shirts</MegaMenuItem>
 							<MegaMenuItem>
 								<Shorts />
 								Shorts</MegaMenuItem>
-							<MegaMenuItem>Swimwear & Beachwear</MegaMenuItem>
+							<MegaMenuItem>
+								<Lingerie />
+								Swimwear & Beachwear</MegaMenuItem>
 							<MegaMenuItem>
 								<Blazer />
 								Blazers</MegaMenuItem>
-							<MegaMenuItem>Hoodies & Sweatshirts</MegaMenuItem>
-							<MegaMenuItem>Coats & Jackets</MegaMenuItem>
+							<MegaMenuItem>
+								<Hoodie />
+								Hoodies & Sweatshirts</MegaMenuItem>
+							<MegaMenuItem>
+								<Coat />
+								Coats & Jackets</MegaMenuItem>
 						</div>
 						<div class="flex flex-col gap-2">
 							<MegaMenuItem>

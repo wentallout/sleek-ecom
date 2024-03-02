@@ -6,7 +6,7 @@
 	import sale3 from '$images/sale3.webp';
 </script>
 
-<section class="g-container mb-24 grid auto-rows-auto gap-4 rounded md:grid-cols-4">
+<section class="container mb-24 grid auto-rows-auto gap-4 rounded md:grid-cols-4">
 	<div class="relative col-span-2 h-[400px] w-auto overflow-hidden md:col-span-2">
 		<img class="h-[400px] w-full object-cover" src={sale1} alt="" />
 		<div class="absolute bottom-0 left-0 w-full bg-black px-3 py-2 text-white">

@@ -3,7 +3,7 @@
 	import ProductCarousel from '$sections/product/product-carousel.svelte';
 </script>
 
-<section class="g-container mb-28">
+<section class="container mb-28">
 	<HeadingWithShowAll headingText="Picks for you" />
 
 	<ProductCarousel />

@@ -14,7 +14,7 @@
 	HeadingWithShowAll;
 </script>
 
-<section class="g-container mb-28">
+<section class="container mb-28">
 	<HeadingWithShowAll headingText="Categories" />
 	<div class="grid gap-4">
 		<a href="/" class="flex flex-col items-center justify-center rounded bg-blue-200">

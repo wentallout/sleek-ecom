@@ -31,7 +31,8 @@ export default defineConfig({
 		enhancedImages(),
 		sveltekit(),
 		Icons({
-			compiler: 'svelte'
+			compiler: 'svelte',
+			defaultStyle: 'width:24px; height:24px'
 		})
 	],
 	test: {

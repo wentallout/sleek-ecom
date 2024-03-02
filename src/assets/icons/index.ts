@@ -14,30 +14,37 @@ import ShoppingCart from '~icons/ph/shopping-cart';
 
 import User from '~icons/ph/user';
 
-import Conscious from '../icons/nav/conscious.svelte';
+import Conscious from '$icons/nav/conscious.svelte';
 
-import Store from '../icons/nav/store.svelte';
+import Store from '$icons/nav/store.svelte';
 
-import Trousers from '../icons/nav/trousers.svelte';
+import Trousers from '$icons/nav/trousers.svelte';
 
-import Skirt from '../icons/nav/skirt.svelte';
+import Skirt from '$icons/nav/skirt.svelte';
 
-import Dress from '../icons/nav/dress.svelte';
+import Dress from '$icons/nav/dress.svelte';
 
-import Lingerie from '../icons/nav/lingerie.svelte';
+import Lingerie from '$icons/nav/lingerie.svelte';
 
-import Sale from '../icons/nav/sale.svelte';
+import Sale from '$icons/nav/sale.svelte';
 
-import All from '../icons/nav/all.svelte';
+import All from '$icons/nav/all.svelte';
 
-import Shorts from '../icons/nav/shorts.svelte';
+import Shorts from '$icons/nav/shorts.svelte';
 
-import Blazer from '../icons/nav/blazer.svelte';
+import Blazer from '$icons/nav/blazer.svelte';
 
-import Tshirt from '../icons/nav/tshirt.svelte';
+import Tshirt from '$icons/nav/tshirt.svelte';
 
+import Shirt from '$icons/nav/shirt.svelte';
 
+import Percent from '~icons/ph/percent';
 
+import StarFour from '~icons/ph/star-four';
+
+import Hoodie from '$icons/nav/hoodie.svelte';
+
+import Coat from '$icons/nav/coat.svelte';
 
 export {
 	All,
@@ -58,5 +65,10 @@ export {
 	LockKey,
 	Shorts,
 	Blazer,
-	Tshirt
+	Tshirt,
+	Percent,
+	Shirt,
+	StarFour,
+	Hoodie,
+	Coat
 };

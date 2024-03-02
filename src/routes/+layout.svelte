@@ -5,11 +5,12 @@
 	import { ModeWatcher } from 'mode-watcher';
 
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import Marquee from '$components/ui/marquee/marquee.svelte';
 	injectSpeedInsights();
 </script>
 
 <ModeWatcher defaultMode="light" />
-
+<Marquee />
 <Navbar />
 
 <main class="min-h-svh">

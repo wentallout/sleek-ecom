@@ -7,7 +7,7 @@
 	// import x from '$lib/icons/social/x.svg';
 </script>
 
-<div class="flex flex-row flex-wrap gap-4">
+<div class="mb-4 flex flex-row flex-wrap gap-4">
 	<a
 		class="aspect-square rounded-full border border-solid border-neutral-300 p-2"
 		href={SOCIAL_FB_URL}>
