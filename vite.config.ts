@@ -20,7 +20,8 @@ export default defineConfig({
 					attributes: {
 						class: 'icon',
 						width: '24',
-						height: '24'
+						height: '24',
+						fill: 'currentColor'
 					}
 				}
 			],

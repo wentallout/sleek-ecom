@@ -9,7 +9,7 @@
 	injectSpeedInsights();
 </script>
 
-<ModeWatcher defaultMode="light" />
+<ModeWatcher defaultMode="system" />
 <Marquee />
 <Navbar />
 
