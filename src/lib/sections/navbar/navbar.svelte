@@ -41,10 +41,9 @@
 </script>
 
 <!-- <Drawer.Root direction="right"> -->
-<header
-	class="sticky top-0 z-50 mb-5 border border-solid border-b-border bg-background pb-0 pt-3 shadow-sm">
+<header class="sticky top-0 z-50 mb-5 bg-background py-6 shadow-sm md:py-4">
 	<div class="container flex flex-row justify-between">
-		<div class="flex flex-row items-center gap-2">
+		<div class="flex flex-row items-center gap-4">
 			<Button class="block md:hidden" variant="outline">
 				<List width="24" height="24" />
 			</Button>
@@ -74,30 +73,37 @@
 			</Drawer.Trigger>
 		</div>
 	</div>
-	<div class="container flex w-full flex-row flex-wrap gap-4">
+	<div class="container hidden w-full flex-row flex-wrap md:flex">
 		<a
-			on:mouseenter={() => (currentHoveredCategory = 'Clothing')}
-			class="py-3 hover:bg-accent"
-			href="/"
-			>Clothing
+			on:click={() => (currentHoveredCategory = 'Clothing')}
+			class="px-3 py-3 hover:bg-accent"
+			href="/">
+			Clothing
 		</a>
 		<a
-			on:mouseenter={() => (currentHoveredCategory = 'Shoes')}
-			class="py-3 hover:bg-accent"
-			href="/">Shoes</a>
-		<a
-			on:mouseenter={() => (currentHoveredCategory = 'Accessories')}
-			class="py-3 hover:bg-accent"
-			href="/">Accessories</a>
-		<a
-			on:mouseenter={() => (currentHoveredCategory = 'Bestsellers')}
-			class="py-3 hover:bg-accent"
+			on:click={() => (currentHoveredCategory = 'Shoes')}
+			class="px-3 py-3 hover:bg-accent"
 			href="/">
-			Bestsellers</a>
+			Shoes
+		</a>
 		<a
-			on:mouseenter={() => (currentHoveredCategory = 'Promos')}
-			class="py-3 hover:bg-accent"
-			href="/">Promos</a>
+			on:click={() => (currentHoveredCategory = 'Accessories')}
+			class="px-3 py-3 hover:bg-accent"
+			href="/">
+			Accessories
+		</a>
+		<a
+			on:click={() => (currentHoveredCategory = 'Bestsellers')}
+			class="px-3 py-3 hover:bg-accent"
+			href="/">
+			Bestsellers
+		</a>
+		<a
+			on:click={() => (currentHoveredCategory = 'Promos')}
+			class="px-3 py-3 hover:bg-accent"
+			href="/">
+			Promos
+		</a>
 	</div>
 
 	{#if currentHoveredCategory !== ''}
@@ -106,12 +112,11 @@
 			role="menu"
 			transition:slide
 			on:mouseleave={() => (currentHoveredCategory = '')}
-			class="absolute left-0 top-[100%] z-50 w-full bg-background bg-opacity-80 py-6 shadow-md backdrop-blur-lg">
+			class="absolute left-0 top-[100%] z-50 max-h-[70vh] w-full overflow-y-auto bg-background bg-opacity-80 py-6 shadow-md backdrop-blur-lg">
 			<div class="container">
 				{#if currentHoveredCategory === 'Clothing'}
-					<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+					<section class="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4">
 						<div class="flex flex-col gap-2">
-							<h2 class="text-lg font-semibold">Clothing categories</h2>
 							<MegaMenuItem>
 								<All />
 								All clothing

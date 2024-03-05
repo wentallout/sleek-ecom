@@ -8,15 +8,15 @@
 	];
 </script>
 
-<div class="relative h-9 w-full overflow-hidden text-base">
+<div class="relative h-9 max-w-[100vw] overflow-hidden text-base">
 	<div class="marquee">
-		<ul class="marquee__content">
+		<ul class="marquee__content overflow-hidden">
 			{#each items as item}
 				<li>{item}</li>
 			{/each}
 		</ul>
 
-		<ul class="marquee__content" aria-hidden="true">
+		<ul class="marquee__content overflow-hidden" aria-hidden="true">
 			{#each items as item}
 				<li>{item}</li>
 			{/each}
@@ -40,7 +40,6 @@
 		display: flex;
 		justify-content: space-around;
 		gap: 24px;
-		min-width: 100%;
 		animation: scroll 20s linear infinite;
 		animation-direction: reverse;
 	}

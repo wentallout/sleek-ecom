@@ -67,13 +67,15 @@
 	];
 
 	const autoplayPlugin = Autoplay({ delay: 2000, stopOnInteraction: true });
-	const scrollPlugin = WheelGesturesPlugin();
 </script>
 
-<Carousel.Root class="w-full" plugins={[autoplayPlugin, scrollPlugin]}>
+<Carousel.Root
+	opts={{ loop: true, containScroll: 'keepSnaps', align: 'start' }}
+	class="w-full overflow-hidden"
+	plugins={[autoplayPlugin, WheelGesturesPlugin({ forceWheelAxis: 'x' })]}>
 	<Carousel.Content class="-ml-2">
 		{#each products as product, i (i)}
-			<Carousel.Item class="basis-1/2 pl-2 md:basis-1/3 lg:basis-1/5">
+			<Carousel.Item class="basis-[49%] pl-2 md:basis-[32%] lg:basis-[19%]">
 				<ProductCard {product} />
 			</Carousel.Item>
 		{/each}

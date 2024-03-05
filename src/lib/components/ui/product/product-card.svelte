@@ -30,7 +30,7 @@
 			{/if}
 
 			{#if product.discountPercent && product.discountPercent > 0}
-				<ProductBadge>{product.discountPercent}%</ProductBadge>
+				<ProductBadge>-{product.discountPercent}%</ProductBadge>
 			{/if}
 		</div>
 	</div>
