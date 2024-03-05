@@ -31,4 +31,8 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Vendure backend
+
+- Step 1: Create a db named "vendure" in pgAdmin (postgreSQL)
+- Step 2: `npx @vendure/create sleek-vendure`
+- Step 3: setup the correct value for above command: localhost, port 5432, db username is `postgres` , password `1234`

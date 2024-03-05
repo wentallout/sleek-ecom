@@ -19,8 +19,6 @@ export default defineConfig({
 					directories: 'src/assets/icons',
 					attributes: {
 						class: 'icon',
-						width: '24',
-						height: '24',
 						fill: 'currentColor'
 					}
 				}
@@ -33,7 +31,7 @@ export default defineConfig({
 		sveltekit(),
 		Icons({
 			compiler: 'svelte',
-			defaultStyle: 'width:24px; height:24px'
+			defaultClass: 'icon'
 		})
 	],
 	test: {

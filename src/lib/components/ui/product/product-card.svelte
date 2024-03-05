@@ -15,7 +15,7 @@
 	}
 </script>
 
-<div class="flex flex-col overflow-hidden">
+<article class="flex flex-col overflow-hidden">
 	<div class="relative mb-2 h-[300px] w-full md:h-[458px]">
 		<button class="absolute right-2 top-2">
 			<Heart />
@@ -35,7 +35,7 @@
 		</div>
 	</div>
 	<div class="font-semibold">{product.brand}</div>
-	<div class="">{product.name}</div>
+	<h3 class="">{product.name}</h3>
 
 	{#if product.discountPercent && product.discountPercent > 0}
 		<div class="flex flex-row gap-2">
@@ -47,4 +47,4 @@
 	{:else}
 		<div class="font-semibold">${product.price}</div>
 	{/if}
-</div>
+</article>

@@ -7,14 +7,18 @@
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import Marquee from '$components/ui/marquee/marquee.svelte';
 	injectSpeedInsights();
+
+	import * as Drawer from '$components/ui/drawer';
 </script>
 
-<ModeWatcher defaultMode="system" />
-<Marquee />
-<Navbar />
+<Drawer.Root direction="right">
+	<ModeWatcher defaultMode="system" />
+	<Marquee />
+	<Navbar />
 
-<main class="min-h-svh">
-	<slot />
-</main>
+	<main class="min-h-svh">
+		<slot />
+	</main>
 
-<Footer />
+	<Footer />
+</Drawer.Root>

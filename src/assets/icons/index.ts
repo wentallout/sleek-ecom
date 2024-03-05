@@ -46,6 +46,8 @@ import Hoodie from '$icons/nav/hoodie.svelte';
 
 import Coat from '$icons/nav/coat.svelte';
 
+import X from '~icons/ph/x';
+
 export {
 	All,
 	Sale,
@@ -70,5 +72,6 @@ export {
 	Shirt,
 	StarFour,
 	Hoodie,
-	Coat
+	Coat,
+	X
 };

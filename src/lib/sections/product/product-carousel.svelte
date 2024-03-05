@@ -2,6 +2,7 @@
 	import * as Carousel from '$components/ui/carousel';
 	import ProductCard from '$components/ui/product/product-card.svelte';
 	import Autoplay from 'embla-carousel-autoplay';
+	import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 
 	import type { Product } from '$lib/types/Product';
 	import product1 from '$images/product1.webp';
@@ -65,10 +66,11 @@
 		}
 	];
 
-	const plugin = Autoplay({ delay: 2000, stopOnInteraction: true });
+	const autoplayPlugin = Autoplay({ delay: 2000, stopOnInteraction: true });
+	const scrollPlugin = WheelGesturesPlugin();
 </script>
 
-<Carousel.Root class="w-full" plugins={[plugin]}>
+<Carousel.Root class="w-full" plugins={[autoplayPlugin, scrollPlugin]}>
 	<Carousel.Content class="-ml-2">
 		{#each products as product, i (i)}
 			<Carousel.Item class="basis-1/2 pl-2 md:basis-1/3 lg:basis-1/5">
