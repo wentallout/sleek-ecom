@@ -38,13 +38,16 @@
 	import Modest from '$images/modest.png';
 	import Office from '$images/office.png';
 	import ProductInCart from '$sections/product/product-in-cart.svelte';
+
+	let isNavOpen: boolean = false;
+	const toggleNav = () => (isNavOpen = !isNavOpen);
 </script>
 
 <!-- <Drawer.Root direction="right"> -->
 <header class="sticky top-0 z-50 mb-5 bg-background py-6 shadow-sm md:py-4">
 	<div class="container flex flex-row justify-between">
 		<div class="flex flex-row items-center gap-4">
-			<Button class="block md:hidden" variant="outline">
+			<Button on:click={toggleNav} class="block md:hidden" variant="outline">
 				<List width="24" height="24" />
 			</Button>
 			<a href="/" class="text-2xl font-bold">SLEEK</a>
@@ -73,19 +76,27 @@
 			</Drawer.Trigger>
 		</div>
 	</div>
+	{#if isNavOpen}
+		<div
+			in:slide={{ duration: 300 }}
+			out:slide
+			class="container absolute left-0 top-[100%] flex h-screen flex-col overflow-hidden bg-background bg-opacity-80 backdrop-blur-lg md:hidden">
+			<a href="/" class="flex h-[48px] items-center">Clothing</a>
+			<a href="/" class="flex h-[48px] items-center">Shoes</a>
+			<a href="/" class="flex h-[48px] items-center">Accessories</a>
+			<a href="/" class="flex h-[48px] items-center">Bestsellers</a>
+		</div>
+	{/if}
+
 	<div class="container hidden w-full flex-row flex-wrap md:flex">
-		<a
+		<button
 			on:click={() => (currentHoveredCategory = 'Clothing')}
-			class="px-3 py-3 hover:bg-accent"
-			href="/">
+			class="px-3 py-3 hover:bg-accent">
 			Clothing
-		</a>
-		<a
-			on:click={() => (currentHoveredCategory = 'Shoes')}
-			class="px-3 py-3 hover:bg-accent"
-			href="/">
+		</button>
+		<button on:click={() => (currentHoveredCategory = 'Shoes')} class="px-3 py-3 hover:bg-accent">
 			Shoes
-		</a>
+		</button>
 		<a
 			on:click={() => (currentHoveredCategory = 'Accessories')}
 			class="px-3 py-3 hover:bg-accent"
@@ -112,7 +123,7 @@
 			role="menu"
 			transition:slide
 			on:mouseleave={() => (currentHoveredCategory = '')}
-			class="absolute left-0 top-[100%] z-50 max-h-[70vh] w-full overflow-y-auto bg-background bg-opacity-80 py-6 shadow-md backdrop-blur-lg">
+			class="absolute left-0 top-[100%] z-50 hidden max-h-[70vh] w-full overflow-y-auto bg-background bg-opacity-80 py-6 shadow-md backdrop-blur-lg md:block">
 			<div class="container">
 				{#if currentHoveredCategory === 'Clothing'}
 					<section class="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4">
