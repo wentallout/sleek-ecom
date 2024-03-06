@@ -31,7 +31,8 @@
 		StarFour,
 		Coat,
 		Hoodie,
-		Store
+		Store,
+		X
 	} from '$icons';
 
 	import NightOut from '$images/night-out.png';
@@ -48,7 +49,11 @@
 	<div class="container flex flex-row justify-between">
 		<div class="flex flex-row items-center gap-4">
 			<Button on:click={toggleNav} class="block md:hidden" variant="outline">
-				<List width="24" height="24" />
+				{#if !isNavOpen}
+					<List width="24" height="24" />
+				{:else}
+					<X width="24" height="24" />
+				{/if}
 			</Button>
 			<a href="/" class="text-2xl font-bold">SLEEK</a>
 		</div>
@@ -78,8 +83,8 @@
 	</div>
 	{#if isNavOpen}
 		<div
-			in:slide={{ duration: 300 }}
-			out:slide
+			in:slide={{ duration: 300, delay: 0 }}
+			out:slide={{ duration: 100, delay: 0 }}
 			class="container absolute left-0 top-[100%] flex h-screen flex-col overflow-hidden bg-background bg-opacity-80 backdrop-blur-lg md:hidden">
 			<a href="/" class="flex h-[48px] items-center">Clothing</a>
 			<a href="/" class="flex h-[48px] items-center">Shoes</a>
