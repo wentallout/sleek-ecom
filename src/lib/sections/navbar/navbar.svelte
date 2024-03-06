@@ -5,7 +5,7 @@
 	import * as Drawer from '$components/ui/drawer';
 
 	import { slide } from 'svelte/transition';
-	let currentCategory: string;
+	let currentCategory: string = '';
 
 	import NextSeason from '$images/next-season.png';
 	import MegaMenuItem from './mega-menu-item.svelte';
@@ -13,7 +13,6 @@
 	import {
 		List,
 		MagnifyingGlass,
-		Heart,
 		ShoppingCart,
 		User,
 		Dress,
@@ -131,12 +130,11 @@
 		</a>
 	</div>
 
-	{#if currentCategory !== ''}
+	{#if currentCategory != ''}
 		<div
-			tabindex="1"
 			role="menu"
 			transition:slide
-			class="absolute left-0 top-[100%] z-50 hidden max-h-[70vh] w-full overflow-y-auto bg-background bg-opacity-80 py-6 shadow-md backdrop-blur-lg md:block">
+			class="absolute left-0 top-[100%] z-50 hidden h-auto max-h-[70vh] w-full overflow-y-auto bg-background bg-opacity-80 py-6 shadow-md backdrop-blur-lg md:block">
 			<div class="container">
 				{#if currentCategory === 'Clothing'}
 					<section class="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4">
