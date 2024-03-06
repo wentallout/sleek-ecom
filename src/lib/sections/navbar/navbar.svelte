@@ -32,7 +32,8 @@
 		Coat,
 		Hoodie,
 		Store,
-		X
+		X,
+		CaretDown
 	} from '$icons';
 
 	import NightOut from '$images/night-out.png';
@@ -47,7 +48,7 @@
 <!-- <Drawer.Root direction="right"> -->
 <header class="sticky top-0 z-50 mb-5 bg-background py-6 shadow-sm md:py-4">
 	<div class="container flex flex-row justify-between">
-		<div class="flex flex-row items-center gap-4">
+		<div class="flex flex-row items-center gap-2">
 			<Button on:click={toggleNav} class="block md:hidden" variant="outline">
 				{#if !isNavOpen}
 					<List width="24" height="24" />
@@ -55,7 +56,7 @@
 					<X width="24" height="24" />
 				{/if}
 			</Button>
-			<a href="/" class="text-2xl font-bold">SLEEK</a>
+			<a href="/" class="text-xl font-bold md:text-2xl">SLEEK</a>
 		</div>
 		<div class="flex flex-row items-center gap-2">
 			<Button class="block md:hidden" variant="outline">
@@ -96,8 +97,8 @@
 	<div class="container hidden w-full flex-row flex-wrap md:flex">
 		<button
 			on:click={() => (currentHoveredCategory = 'Clothing')}
-			class="px-3 py-3 hover:bg-accent">
-			Clothing
+			class="no-wrap flex flex-row gap-1 px-3 py-3 hover:bg-accent">
+			Clothing <CaretDown />
 		</button>
 		<button on:click={() => (currentHoveredCategory = 'Shoes')} class="px-3 py-3 hover:bg-accent">
 			Shoes

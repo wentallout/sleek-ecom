@@ -48,6 +48,8 @@ import Coat from '$icons/nav/coat.svelte';
 
 import X from '~icons/ph/x';
 
+import CaretDown from '~icons/ph/caret-down';
+
 export {
 	All,
 	Sale,
@@ -73,5 +75,6 @@ export {
 	StarFour,
 	Hoodie,
 	Coat,
-	X
+	X,
+	CaretDown
 };

@@ -75,7 +75,7 @@
 	plugins={[autoplayPlugin, WheelGesturesPlugin({ forceWheelAxis: 'x' })]}>
 	<Carousel.Content class="-ml-2">
 		{#each products as product, i (i)}
-			<Carousel.Item class="basis-[49%] pl-2 md:basis-[32%] lg:basis-[19%]">
+			<Carousel.Item class="3xl:basis-[16%] basis-[49%] pl-2 md:basis-[32%] lg:basis-[19%]">
 				<ProductCard {product} />
 			</Carousel.Item>
 		{/each}

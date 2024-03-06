@@ -8,9 +8,9 @@
 	];
 </script>
 
-<div class="relative h-9 max-w-[100vw] overflow-hidden text-base">
-	<div class="marquee">
-		<ul class="marquee__content overflow-hidden">
+<div class="relative h-9 max-w-[100vw] overflow-hidden text-base font-bold">
+	<div class="marquee relative flex select-none gap-10">
+		<ul class="marquee__content">
 			{#each items as item}
 				<li>{item}</li>
 			{/each}
@@ -25,21 +25,11 @@
 </div>
 
 <style>
-	.marquee {
-		position: relative;
-		display: flex;
-		overflow: hidden;
-		user-select: none;
-		gap: 24px;
-		color: var(--colorText);
-		padding: var(--spaceXS) 0;
-	}
-
 	.marquee__content {
 		flex-shrink: 0;
 		display: flex;
 		justify-content: space-around;
-		gap: 24px;
+		gap: 40px;
 		animation: scroll 20s linear infinite;
 		animation-direction: reverse;
 	}
@@ -53,7 +43,7 @@
 			transform: translateX(0);
 		}
 		to {
-			transform: translateX(calc(-100% - 24px));
+			transform: translateX(calc(-100% - 40px));
 		}
 	}
 </style>

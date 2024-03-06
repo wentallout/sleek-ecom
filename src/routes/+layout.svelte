@@ -13,12 +13,12 @@
 
 <Drawer.Root direction="right">
 	<ModeWatcher defaultMode="system" />
-	<Marquee />
+
 	<Navbar />
 
 	<main class="min-h-svh">
 		<slot />
 	</main>
-
+	<Marquee />
 	<Footer />
 </Drawer.Root>
