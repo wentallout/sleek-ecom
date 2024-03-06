@@ -49,7 +49,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sentry/sveltekit": "^7.105.0",
 		"@vercel/speed-insights": "^1.0.10",
 		"bits-ui": "^0.18.6",
 		"clsx": "^2.1.0",
