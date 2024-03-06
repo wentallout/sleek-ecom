@@ -49,6 +49,7 @@ import Coat from '$icons/nav/coat.svelte';
 import X from '~icons/ph/x';
 
 import CaretDown from '~icons/ph/caret-down';
+import CaretUp from '~icons/ph/caret-up';
 
 export {
 	All,
@@ -76,5 +77,6 @@ export {
 	Hoodie,
 	Coat,
 	X,
-	CaretDown
+	CaretDown,
+	CaretUp
 };
