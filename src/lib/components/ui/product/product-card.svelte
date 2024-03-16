@@ -22,10 +22,10 @@
 		</button>
 		<img class="h-full w-full rounded object-cover" src={product.thumbnailUrl} alt="" />
 		<div class="absolute bottom-1 left-1 flex flex-row flex-nowrap gap-1">
-			{#if product.isNew}
+			{#if product.isNew === true}
 				<ProductBadge>NEW</ProductBadge>
 			{/if}
-			{#if product.isHot}
+			{#if product.isHot === true}
 				<ProductBadge>HOT</ProductBadge>
 			{/if}
 

@@ -50,6 +50,7 @@ import X from '~icons/ph/x';
 
 import CaretDown from '~icons/ph/caret-down';
 import CaretUp from '~icons/ph/caret-up';
+import CaretRight from '~icons/ph/caret-right';
 
 export {
 	All,
@@ -78,5 +79,6 @@ export {
 	Coat,
 	X,
 	CaretDown,
-	CaretUp
+	CaretUp,
+	CaretRight
 };

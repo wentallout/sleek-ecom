@@ -9,6 +9,7 @@
 	injectSpeedInsights();
 
 	import * as Drawer from '$components/ui/drawer';
+	import Breadcrumb from '$components/ui/breadcrumb/breadcrumb.svelte';
 </script>
 
 <Drawer.Root direction="right">

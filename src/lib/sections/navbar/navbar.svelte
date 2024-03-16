@@ -39,21 +39,21 @@
 	import NightOut from '$images/night-out.png';
 	import Modest from '$images/modest.png';
 	import Office from '$images/office.png';
-	import ProductInCart from '$sections/product/product-in-cart.svelte';
+
+	import CartDrawer from '$components/ui/cart/cart-drawer.svelte';
 
 	let isNavOpen: boolean = false;
 	const toggleNav = () => (isNavOpen = !isNavOpen);
 
 	function toggleCategory(category: string) {
-		if (currentCategory === category) {
-			currentCategory = '';
-		} else {
-			currentCategory = category;
-		}
+		currentCategory = category;
+	}
+
+	function closeCategory() {
+		currentCategory = '';
 	}
 </script>
 
-<!-- <Drawer.Root direction="right"> -->
 <header class="sticky top-0 z-50 mb-5 bg-background py-6 shadow-sm md:py-4">
 	<div class="container flex flex-row justify-between">
 		<div class="flex flex-row items-center gap-2">
@@ -91,8 +91,9 @@
 		</div>
 	</div>
 	{#if isNavOpen}
+		<!-- MOBILE -->
 		<div
-			in:slide={{ duration: 300, delay: 0 }}
+			in:slide={{ duration: 100, delay: 0 }}
 			out:slide={{ duration: 100, delay: 0 }}
 			class="container absolute left-0 top-[100%] flex h-screen flex-col overflow-hidden bg-background bg-opacity-80 backdrop-blur-lg md:hidden">
 			<a href="/" class="flex h-[48px] items-center">Clothing</a>
@@ -104,8 +105,8 @@
 
 	<div class="container hidden w-full flex-row flex-wrap md:flex">
 		<button
-			on:click={() => toggleCategory('Clothing')}
-			class="no-wrap flex flex-row gap-1 px-3 py-3 hover:bg-accent">
+			on:pointerover={() => toggleCategory('Clothing')}
+			class="no-wrap flex flex-row items-center gap-1 px-3 py-3 hover:bg-accent">
 			Clothing
 			{#if currentCategory === 'Clothing'}
 				<CaretUp />
@@ -113,33 +114,28 @@
 				<CaretDown />
 			{/if}
 		</button>
-		<button on:click={() => toggleCategory('Shoes')} class="px-3 py-3 hover:bg-accent">
+		<button
+			on:pointerover={() => toggleCategory('Shoes')}
+			class="no-wrap flex flex-row items-center gap-1 px-3 py-3 hover:bg-accent">
 			Shoes
 		</button>
-		<a on:click={() => toggleCategory('Accessories')} class="px-3 py-3 hover:bg-accent" href="/">
-			Accessories
-		</a>
-		<a
-			on:click={() => (currentCategory = 'Bestsellers')}
-			class="px-3 py-3 hover:bg-accent"
-			href="/">
-			Bestsellers
-		</a>
-		<a on:click={() => (currentCategory = 'Promos')} class="px-3 py-3 hover:bg-accent" href="/">
-			Promos
-		</a>
+		<a class="px-3 py-3 hover:bg-accent" href="/"> Accessories </a>
+		<a class="px-3 py-3 hover:bg-accent" href="/"> Bestsellers </a>
+		<a class="px-3 py-3 hover:bg-accent" href="/"> Promos </a>
 	</div>
 
 	{#if currentCategory != ''}
 		<div
+			on:pointerleave={closeCategory}
 			role="menu"
-			transition:slide
+			in:slide|global={{ delay: 0 }}
+			out:slide|global={{ delay: 200 }}
 			class="absolute left-0 top-[100%] z-50 hidden h-auto max-h-[70vh] w-full overflow-y-auto bg-background bg-opacity-80 py-6 shadow-md backdrop-blur-lg md:block">
 			<div class="container">
 				{#if currentCategory === 'Clothing'}
 					<section class="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4">
 						<div class="flex flex-col gap-2">
-							<MegaMenuItem>
+							<MegaMenuItem href="/product">
 								<All />
 								All clothing
 							</MegaMenuItem>
@@ -230,13 +226,10 @@
 							</a>
 						</div>
 					</section>
-				{:else if currentCategory === 'Shoes'}
+				{/if}
+				{#if currentCategory === 'Shoes'}
 					<section>
 						<div>Shoes test</div>
-					</section>
-				{:else if currentCategory === 'Accessories'}
-					<section>
-						<div class="">Acc</div>
 					</section>
 				{/if}
 			</div>
@@ -244,28 +237,4 @@
 	{/if}
 </header>
 
-<Drawer.Content
-	class="left-auto right-0 top-0 mt-0 h-screen w-[80vw] rounded shadow-lg md:w-[500px]">
-	<div class="h-screen w-full overflow-y-visible">
-		<Drawer.Header>
-			<Drawer.Title class="flex flex-row items-center gap-3">
-				<ShoppingCart />
-				Your Cart
-			</Drawer.Title>
-		</Drawer.Header>
-		<div class="p-4 pb-0">
-			<div class="">
-				<div class="flex flex-col">
-					<ProductInCart />
-					<ProductInCart />
-				</div>
-			</div>
-		</div>
-		<Drawer.Footer>
-			<Button>Checkout</Button>
-			<Drawer.Close asChild let:builder>
-				<Button builders={[builder]} variant="outline">Cancel</Button>
-			</Drawer.Close>
-		</Drawer.Footer>
-	</div>
-</Drawer.Content>
+<CartDrawer />
