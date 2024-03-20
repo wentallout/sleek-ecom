@@ -9,7 +9,7 @@
 	import FooterItem from './footer-item.svelte';
 </script>
 
-<footer class="w-full bg-muted py-12">
+<footer class="w-full border-b-2 bg-muted py-12">
 	<div class="container">
 		<section class="grid grid-cols-2 gap-x-12 gap-y-12 md:grid-cols-4 lg:grid-cols-5">
 			<div class="col-span-2 flex flex-col gap-4">

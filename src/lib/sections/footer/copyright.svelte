@@ -1,4 +1,4 @@
-<div class="border-t-black-500 w-full border-solid py-6">
+<div class="border-t-black-500 w-full border-solid bg-muted py-6">
 	<div class="container flex flex-row flex-wrap items-center justify-between gap-4">
 		<div class="">© 2024 Nguyen Dang Khoa @wentallout</div>
 		<div class="flex flex-row flex-wrap gap-4">

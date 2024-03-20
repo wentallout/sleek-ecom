@@ -1,6 +1,4 @@
 <script>
-	import Breadcrumb from '$components/ui/breadcrumb/breadcrumb.svelte';
-
 	import Blouse from '$images/subcategory-blouse.png';
 	import Sleeveless from '$images/subcategory-sleeveless.png';
 	import LongSleeve from '$images/subcategory-longsleeve.png';
@@ -9,8 +7,6 @@
 	import SubcategoryCard from '$components/ui/product/subcategory-card.svelte';
 	import ProductGrid from '$sections/product/product-grid.svelte';
 </script>
-
-<Breadcrumb />
 
 <h1 class="container mb-8 text-4xl font-semibold">Shirts and Tops for Women</h1>
 <div class="container grid grid-cols-12 gap-4">

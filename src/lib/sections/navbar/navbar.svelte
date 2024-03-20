@@ -93,8 +93,8 @@
 	{#if isNavOpen}
 		<!-- MOBILE -->
 		<div
-			in:slide={{ duration: 100, delay: 0 }}
-			out:slide={{ duration: 100, delay: 0 }}
+			in:slide={{ duration: 100 }}
+			out:slide={{ duration: 100 }}
 			class="container absolute left-0 top-[100%] flex h-screen flex-col overflow-hidden bg-background bg-opacity-80 backdrop-blur-lg md:hidden">
 			<a href="/" class="flex h-[48px] items-center">Clothing</a>
 			<a href="/" class="flex h-[48px] items-center">Shoes</a>

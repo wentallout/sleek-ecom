@@ -52,6 +52,8 @@ import CaretDown from '~icons/ph/caret-down';
 import CaretUp from '~icons/ph/caret-up';
 import CaretRight from '~icons/ph/caret-right';
 
+import DotsThree from '~icons/ph/dots-three';
+
 export {
 	All,
 	Sale,
@@ -80,5 +82,6 @@ export {
 	X,
 	CaretDown,
 	CaretUp,
-	CaretRight
+	CaretRight,
+	DotsThree
 };
