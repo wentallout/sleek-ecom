@@ -17,7 +17,8 @@
 			thumbnailUrl: product1,
 			discountPercent: 30,
 			isNew: false,
-			isHot: true
+			isHot: true,
+			detailUrl: '/product/detail'
 		},
 		{
 			name: 'Clothes 2',
@@ -26,7 +27,8 @@
 			thumbnailUrl: product2,
 			discountPercent: 30,
 			isNew: true,
-			isHot: false
+			isHot: false,
+			detailUrl: '/product/detail'
 		},
 		{
 			name: 'Clothes 3',
@@ -35,7 +37,8 @@
 			thumbnailUrl: product3,
 			discountPercent: 30,
 			isNew: false,
-			isHot: true
+			isHot: true,
+			detailUrl: '/product/detail'
 		},
 		{
 			name: 'Clothes 1',
@@ -44,7 +47,8 @@
 			thumbnailUrl: product1,
 			discountPercent: 30,
 			isNew: false,
-			isHot: true
+			isHot: true,
+			detailUrl: '/product/detail'
 		},
 		{
 			name: 'Clothes 2',
@@ -53,7 +57,8 @@
 			thumbnailUrl: product2,
 			discountPercent: 30,
 			isNew: true,
-			isHot: false
+			isHot: false,
+			detailUrl: '/product/detail'
 		},
 		{
 			name: 'Clothes 3',
@@ -62,7 +67,28 @@
 			thumbnailUrl: product3,
 			discountPercent: 30,
 			isNew: false,
-			isHot: true
+			isHot: true,
+			detailUrl: '/product/detail'
+		},
+		{
+			name: 'Clothes 5',
+			brand: 'brandName3',
+			price: 333,
+			thumbnailUrl: product3,
+			discountPercent: 30,
+			isNew: false,
+			isHot: true,
+			detailUrl: '/product/detail'
+		},
+		{
+			name: 'Clothes 6',
+			brand: 'brandName3',
+			price: 333,
+			thumbnailUrl: product3,
+			discountPercent: 30,
+			isNew: false,
+			isHot: true,
+			detailUrl: '/product/detail'
 		}
 	];
 
@@ -70,7 +96,7 @@
 </script>
 
 <Carousel.Root
-	opts={{ loop: true, containScroll: 'keepSnaps', align: 'start' }}
+	opts={{ containScroll: 'trimSnaps', align: 'start', skipSnaps: false }}
 	class="w-full overflow-hidden"
 	plugins={[autoplayPlugin, WheelGesturesPlugin({ forceWheelAxis: 'x' })]}>
 	<Carousel.Content class="-ml-2">

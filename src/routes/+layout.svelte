@@ -4,21 +4,23 @@
 	import '../app.pcss';
 	import { ModeWatcher } from 'mode-watcher';
 
-	import Marquee from '$components/ui/marquee/marquee.svelte';
+	
 
 	import * as Drawer from '$components/ui/drawer';
-	import Breadcrumb from '$components/ui/breadcrumb/dynamic-breadcrumb.svelte';
+	import DynamicBreadcrumb from '$components/ui/breadcrumb/breadcrumb-dynamic.svelte';
+
+	import { page } from '$app/stores';
 </script>
 
 <Drawer.Root direction="right">
 	<ModeWatcher defaultMode="system" />
 
 	<Navbar />
-	<Breadcrumb />
+	<DynamicBreadcrumb path={$page.url.pathname} />
 
 	<main class="min-h-svh">
 		<slot />
 	</main>
-	<Marquee />
+
 	<Footer />
 </Drawer.Root>

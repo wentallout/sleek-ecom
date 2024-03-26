@@ -7,9 +7,11 @@
 	import ThemeDropdown from '$components/theme/theme-switcher.svelte';
 	import FooterHeading from './footer-heading.svelte';
 	import FooterItem from './footer-item.svelte';
+
+	import Marquee from '$components/ui/marquee/marquee.svelte';
 </script>
 
-<footer class="w-full border-b-2 bg-muted py-12">
+<footer class="mt-24 w-full border-b-2 bg-muted py-12">
 	<div class="container">
 		<section class="grid grid-cols-2 gap-x-12 gap-y-12 md:grid-cols-4 lg:grid-cols-5">
 			<div class="col-span-2 flex flex-col gap-4">
@@ -75,3 +77,4 @@
 	</div>
 </footer>
 <Copyright />
+<Marquee />

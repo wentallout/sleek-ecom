@@ -8,7 +8,7 @@
 	];
 </script>
 
-<div class="relative h-9 max-w-[100vw] overflow-hidden text-base font-bold">
+<div class="relative max-w-[100vw] overflow-hidden bg-background py-4 text-base font-bold">
 	<div class="marquee relative flex select-none gap-10">
 		<ul class="marquee__content">
 			{#each items as item}

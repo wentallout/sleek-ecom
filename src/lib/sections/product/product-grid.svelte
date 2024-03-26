@@ -15,7 +15,8 @@
 			thumbnailUrl: product1,
 			discountPercent: 30,
 			isNew: false,
-			isHot: true
+			isHot: true,
+			detailUrl: '/product/detail'
 		},
 		{
 			name: 'Clothes 2',
@@ -24,7 +25,8 @@
 			thumbnailUrl: product2,
 			discountPercent: 30,
 			isNew: true,
-			isHot: false
+			isHot: false,
+			detailUrl: '/product/detail'
 		},
 		{
 			name: 'Clothes 3',
@@ -33,7 +35,8 @@
 			thumbnailUrl: product3,
 			discountPercent: 30,
 			isNew: false,
-			isHot: true
+			isHot: true,
+			detailUrl: '/product/detail'
 		},
 		{
 			name: 'Clothes 1',
@@ -42,7 +45,8 @@
 			thumbnailUrl: product1,
 			discountPercent: 30,
 			isNew: false,
-			isHot: true
+			isHot: true,
+			detailUrl: '/product/detail'
 		},
 		{
 			name: 'Clothes 2',
@@ -51,7 +55,8 @@
 			thumbnailUrl: product2,
 			discountPercent: 69,
 			isNew: true,
-			isHot: false
+			isHot: false,
+			detailUrl: '/product/detail'
 		},
 		{
 			name: 'Clothes 3',
@@ -60,7 +65,8 @@
 			thumbnailUrl: product3,
 			discountPercent: 0,
 			isNew: false,
-			isHot: false
+			isHot: false,
+			detailUrl: '/product/detail'
 		}
 	];
 </script>
