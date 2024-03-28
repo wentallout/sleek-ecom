@@ -1,6 +1,6 @@
 # Sleek Ecom
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Most complete, powerful ecommerce solution ever created. Powered by SvelteKit.
 
 ## Icons
 
@@ -30,6 +30,10 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
+
+## Form Validation
+
+https://www.okupter.com/blog/sveltekit-form-validation-with-zod
 
 ## Vendure backend
 
