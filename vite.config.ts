@@ -6,20 +6,20 @@ import { enhancedImages } from '@sveltejs/enhanced-img';
 
 export default defineConfig({
 	plugins: [
-		inlineSvg(
-			[
-				{
-					directories: 'src/assets/icons',
-					attributes: {
-						class: 'icon',
-						fill: 'currentColor'
-					}
-				}
-			],
-			{
-				inlineSrcAttributeName: 'inline-src'
-			}
-		),
+		// inlineSvg(
+		// 	[
+		// 		{
+		// 			directories: 'src/assets/icons',
+		// 			attributes: {
+		// 				class: 'icon',
+		// 				fill: 'currentColor'
+		// 			}
+		// 		}
+		// 	],
+		// 	{
+		// 		inlineSrcAttributeName: 'inline-src'
+		// 	}
+		// ),
 		enhancedImages(),
 		sveltekit(),
 		Icons({

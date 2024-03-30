@@ -4,11 +4,13 @@
 
 	import * as Drawer from '$components/ui/drawer';
 
-	import { slide } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	let currentCategory: string = '';
 
 	import NextSeason from '$images/next-season.png';
 	import MegaMenuItem from './mega-menu-item.svelte';
+
+	export let data: LayoutServerData;
 
 	import {
 		List,
@@ -52,6 +54,10 @@
 	function closeCategory() {
 		currentCategory = '';
 	}
+
+	import * as Dialog from '$lib/components/ui/dialog';
+	import LoginForm from '../../../routes/login/login-form.svelte';
+	import type { LayoutServerData } from '../../../routes/$types';
 </script>
 
 <header class="sticky top-0 z-50 mb-5 bg-background py-6 shadow-sm md:py-4">
@@ -78,10 +84,22 @@
 				</Input>
 			</div>
 
-			<Button variant="outline">
-				<User class="md:mr-2" width="24" height="24" />
-				<span class="hidden text-sm font-semibold md:block">Login</span>
-			</Button>
+			<Dialog.Root>
+				<Dialog.Trigger>
+					<Button variant="outline">
+						<User class="md:mr-2" width="24" height="24" />
+						<p class="hidden text-sm font-semibold md:block">Login</p>
+					</Button>
+				</Dialog.Trigger>
+				<Dialog.Content>
+					<Dialog.Header>
+						<Dialog.Title>Login</Dialog.Title>
+						<Dialog.Description>
+							<LoginForm data={data.form} />
+						</Dialog.Description>
+					</Dialog.Header>
+				</Dialog.Content>
+			</Dialog.Root>
 
 			<Drawer.Trigger asChild let:builder>
 				<Button builders={[builder]} variant="outline">
@@ -93,8 +111,7 @@
 	{#if isNavOpen}
 		<!-- MOBILE -->
 		<div
-			in:slide={{ duration: 100 }}
-			out:slide={{ duration: 100 }}
+			transition:fade={{ duration: 100 }}
 			class="container absolute left-0 top-[100%] flex h-screen flex-col overflow-hidden bg-background bg-opacity-80 backdrop-blur-lg md:hidden">
 			<a href="/" class="flex h-[48px] items-center">Clothing</a>
 			<a href="/" class="flex h-[48px] items-center">Shoes</a>
@@ -126,10 +143,9 @@
 
 	{#if currentCategory != ''}
 		<div
+			transition:fade={{ duration: 100 }}
 			on:pointerleave={closeCategory}
 			role="menu"
-			in:slide|global={{ delay: 0 }}
-			out:slide|global={{ delay: 200 }}
 			class="absolute left-0 top-[100%] z-50 hidden h-auto max-h-[70vh] w-full overflow-y-auto bg-background bg-opacity-80 py-6 shadow-md backdrop-blur-lg md:block">
 			<div class="container">
 				{#if currentCategory === 'Clothing'}

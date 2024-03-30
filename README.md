@@ -4,7 +4,7 @@ Everything you need to build a Svelte project, powered by [`create-svelte`](http
 
 ## Icons
 
-Phosphor - Browse Collection: https://icon-sets.iconify.design/ph
+Phosphor - Browse Collection: [https://icon-sets.iconify.design/ph]
 
 ## Auth
 

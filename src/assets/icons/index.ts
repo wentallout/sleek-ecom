@@ -1,11 +1,7 @@
 import ArrowRight from '~icons/ph/arrow-right';
-
 import Truck from '~icons/ph/truck';
-
 import LockKey from '~icons/ph/lock-key';
-
 import List from '~icons/ph/list';
-
 import MagnifyingGlass from '~icons/ph/magnifying-glass';
 
 import Heart from '~icons/ph/heart';
@@ -33,26 +29,21 @@ import All from '$icons/nav/all.svelte';
 import Shorts from '$icons/nav/shorts.svelte';
 
 import Blazer from '$icons/nav/blazer.svelte';
-
 import Tshirt from '$icons/nav/tshirt.svelte';
-
 import Shirt from '$icons/nav/shirt.svelte';
-
 import Percent from '~icons/ph/percent';
-
 import StarFour from '~icons/ph/star-four';
-
 import Hoodie from '$icons/nav/hoodie.svelte';
-
 import Coat from '$icons/nav/coat.svelte';
-
 import X from '~icons/ph/x';
-
 import CaretDown from '~icons/ph/caret-down';
 import CaretUp from '~icons/ph/caret-up';
 import CaretRight from '~icons/ph/caret-right';
-
 import DotsThree from '~icons/ph/dots-three';
+
+import Sun from '~icons/ph/sun';
+import Moon from '~icons/ph/moon';
+import Warning from '~icons/ph/warning';
 
 export {
 	All,
@@ -83,5 +74,8 @@ export {
 	CaretDown,
 	CaretUp,
 	CaretRight,
-	DotsThree
+	DotsThree,
+	Sun,
+	Moon,
+	Warning
 };

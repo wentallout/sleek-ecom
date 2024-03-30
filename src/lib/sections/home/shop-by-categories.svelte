@@ -17,9 +17,9 @@
 <section class="container mb-28">
 	<HeadingWithShowAll headingText="Categories" />
 	<div class="grid gap-4">
-		<a href="/" class="flex h-[300px] flex-col items-center justify-center rounded bg-blue-200">
-			<div class="text-2xl font-semibold text-blue-700">All Categories</div>
-			<div class="flex flex-row gap-2 text-blue-700">
+		<a href="/" class="flex h-[300px] flex-col items-center justify-center rounded bg-primary">
+			<div class="text-2xl font-semibold text-primary-foreground">All Categories</div>
+			<div class="flex flex-row gap-2 text-primary-foreground">
 				Discover
 				<ArrowRight />
 			</div>

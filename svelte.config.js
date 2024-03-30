@@ -18,7 +18,8 @@ const config = {
 			$components: './src/lib/components',
 			$sections: './src/lib/sections',
 			$images: './src/assets/images',
-			$icons: './src/assets/icons'
+			$icons: './src/assets/icons',
+			$types: './src/lib/types'
 		}
 	}
 };

@@ -18,7 +18,8 @@
 <a href={product.detailUrl}>
 	<article class="flex flex-col overflow-hidden">
 		<div class="relative mb-2 h-[300px] w-full md:h-[458px]">
-			<button class="absolute right-2 top-2">
+			<button
+				class="absolute right-0 top-0 grid h-10 w-10 place-items-center rounded-full transition-all hover:bg-primary-foreground">
 				<Heart />
 			</button>
 			<img class="h-full w-full rounded object-cover" src={product.thumbnailUrl} alt="" />

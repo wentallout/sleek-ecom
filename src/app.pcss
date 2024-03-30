@@ -82,3 +82,9 @@
 		color: currentColor;
 	}
 }
+
+@layer utilities {
+	.focus-ring {
+		@apply outline-none ring-2 ring-ring ring-offset-2 transition;
+	}
+}
