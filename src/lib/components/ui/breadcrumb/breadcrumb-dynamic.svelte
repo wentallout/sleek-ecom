@@ -25,18 +25,20 @@
 </script>
 
 <Breadcrumb.Root class="container mb-8">
-	<Breadcrumb.List>
-		{#each crumbs as c, i}
-			{#if i == crumbs.length - 1}
-				<Breadcrumb.Item class="font-semibold text-primary">
-					{c.label}
-				</Breadcrumb.Item>
-			{:else}
-				<Breadcrumb.Item>
-					<Breadcrumb.Link href={c.href}>{c.label}</Breadcrumb.Link>
-				</Breadcrumb.Item>
-				<Breadcrumb.Separator />
-			{/if}
-		{/each}
-	</Breadcrumb.List>
+	{#if crumbs.length !== 1}
+		<Breadcrumb.List>
+			{#each crumbs as c, i}
+				{#if i == crumbs.length - 1}
+					<Breadcrumb.Item class="font-semibold text-primary">
+						{c.label}
+					</Breadcrumb.Item>
+				{:else}
+					<Breadcrumb.Item>
+						<Breadcrumb.Link href={c.href}>{c.label}</Breadcrumb.Link>
+					</Breadcrumb.Item>
+					<Breadcrumb.Separator />
+				{/if}
+			{/each}
+		</Breadcrumb.List>
+	{/if}
 </Breadcrumb.Root>
