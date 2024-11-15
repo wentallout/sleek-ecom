@@ -1,13 +1,9 @@
 <script>
 	import CategoryCard from '$components/ui/product/category-card.svelte';
-	import CategoryClothing from '$images/category-clothing.webp';
-
-	import CategoryShoes from '$images/category-shoes.webp';
-
-	import CategorySportwear from '$images/category-sportwear.webp';
-
-	import CategoryAcc from '$images/category-acc.webp';
-
+	import CategoryClothing from '$images/category-clothing.webp?enhanced';
+	import CategoryShoes from '$images/category-shoes.webp?enhanced';
+	import CategorySportwear from '$images/category-sportwear.webp?enhanced';
+	import CategoryAcc from '$images/category-acc.webp?enhanced';
 	import ArrowRight from '~icons/ph/arrow-right';
 	import HeadingWithShowAll from '$components/ui/heading/heading-with-show-all.svelte';
 

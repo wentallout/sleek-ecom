@@ -56,12 +56,12 @@
 		<section class="col-span-12 grid grid-cols-12 gap-4 md:col-span-6 md:grid-cols-6">
 			<div class="col-span-12 flex flex-row gap-2 overflow-hidden md:col-span-1 md:flex-col">
 				{#each data.productImages as productImage}
-					<img class="h-auto w-full object-cover" src={productImage} alt="" />
+					<img loading="lazy" class="h-auto w-full object-cover" src={productImage} alt="" />
 				{/each}
 			</div>
 
 			<div class="col-span-12 md:col-span-5">
-				<img class="w-full object-cover" src={currentDisplayImage} alt="" />
+				<img loading="lazy" class="w-full object-cover" src={currentDisplayImage} alt="" />
 			</div>
 		</section>
 
@@ -86,16 +86,16 @@
 			</div>
 
 			<div class="mb-12 flex gap-2">
-				<Button class="flex-grow gap-1 py-7 text-base font-semibold">
+				<Button class="btn-lg flex-grow">
 					<ShoppingCart width="24" height="24" />
-					Add to bag
+					Add to cart
 				</Button>
-				<Button variant="secondary" class="py-7 text-base font-semibold">
+				<Button variant="secondary" class="btn-lg">
 					<Heart width="24" height="24" />
 				</Button>
 			</div>
 
-			<Accordion.Root class="w-full">
+			<Accordion.Root class="mb-10 w-full">
 				<Accordion.Item value="item-1">
 					<Accordion.Trigger>Product details & Care</Accordion.Trigger>
 					<Accordion.Content>

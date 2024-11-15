@@ -17,12 +17,16 @@
 
 <a href={product.detailUrl}>
 	<article class="flex flex-col overflow-hidden">
-		<div class="relative mb-2 h-[300px] w-full md:h-[458px]">
+		<div class="relative mb-2">
 			<button
 				class="absolute right-0 top-0 grid h-10 w-10 place-items-center rounded-full transition-all hover:bg-primary-foreground">
 				<Heart />
 			</button>
-			<img class="h-full w-full rounded object-cover" src={product.thumbnailUrl} alt="" />
+			<img
+				loading="lazy"
+				class="h-full min-h-[224px] w-full rounded-md object-cover md:min-h-[378px]"
+				src={product.thumbnailUrl}
+				alt="product thumbnail" />
 			<div class="absolute bottom-1 left-1 flex flex-row flex-nowrap gap-1">
 				{#if product.isNew === true}
 					<ProductBadge>NEW</ProductBadge>

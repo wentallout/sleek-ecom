@@ -9,6 +9,7 @@
 	import FooterItem from './footer-item.svelte';
 
 	import Marquee from '$components/ui/marquee/marquee.svelte';
+	import { MARQUEE_ITEMS } from '$lib/constants';
 </script>
 
 <footer class="mt-24 w-full border-b-2 bg-muted py-12">
@@ -77,4 +78,15 @@
 	</div>
 </footer>
 <Copyright />
-<Marquee />
+<Marquee
+	class="w-full gap-12 py-2"
+	direction="left"
+	fade={true}
+	reverse={true}
+	pauseOnHover={true}
+	numberOfCopies={3}
+	innerClassName="gap-12">
+	{#each MARQUEE_ITEMS as item}
+		<div>{item}</div>
+	{/each}
+</Marquee>

@@ -21,22 +21,13 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
 ## Form Validation
 
 https://www.okupter.com/blog/sveltekit-form-validation-with-zod
 
-## Vendure backend
 
-- Step 1: Create a db named "vendure" in pgAdmin (postgreSQL)
-- Step 2: `npx @vendure/create sleek-vendure`
-- Step 3: setup the correct value for above command: localhost, port 5432, db username is `postgres` , password `1234`
+## Color theme
+
+Current color: #F9E5C9
+- https://zippystarter.com/tools/shadcn-ui-theme-generator
+- https://brandpalettes.com/apple-iphone-colors/

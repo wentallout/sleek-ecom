@@ -81,7 +81,5 @@
 
 <section class="flex flex-col items-center justify-center gap-6">
 	<div class="">100 of 389 items are shown</div>
-	<Button variant="secondary" class="mb-24 min-h-14 w-1/2 text-base font-semibold">
-		Load more
-	</Button>
+	<Button variant="secondary" class="btn-lg mb-24 w-1/2 text-base font-semibold">Load more</Button>
 </section>

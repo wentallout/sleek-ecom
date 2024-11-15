@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from '$components/ui/button/button.svelte';
-	import Separator from '$components/ui/separator/separator.svelte';
+	import OrSeparator from '$components/ui/separator/or-separator.svelte';
+
 	import * as Form from '$lib/components/ui/form';
 	import { Input } from '$lib/components/ui/input';
 	import { loginFormSchema, type LoginFormSchema } from '$types/schema';
@@ -20,7 +21,7 @@
 <form class="flex flex-col gap-3" method="POST" use:enhance>
 	<Form.Field {form} name="email">
 		<Form.Control let:attrs>
-			<Form.Label>Email</Form.Label>
+			<Form.Label class="text-foreground">Email</Form.Label>
 			<Input {...attrs} bind:value={$formData.email} />
 		</Form.Control>
 		<Form.FieldErrors />
@@ -28,7 +29,7 @@
 
 	<Form.Field {form} name="password">
 		<Form.Control let:attrs>
-			<Form.Label>Password</Form.Label>
+			<Form.Label class="text-foreground">Password</Form.Label>
 			<Input type="password" {...attrs} bind:value={$formData.password} />
 		</Form.Control>
 		<Form.FieldErrors />
@@ -38,7 +39,7 @@
 
 	<a href="/signup">Don't have an account? Sign up</a>
 
-	<Separator class="my-7" />
+	<OrSeparator />
 
 	<div class="flex flex-col gap-2">
 		<Button variant="secondary">Continue with Google</Button>

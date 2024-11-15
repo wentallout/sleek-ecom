@@ -1,49 +1,45 @@
-<script>
-	export let items = [
-		'Free delivery for orders above $50',
-		'Ship Worldwide',
-		'All shoes are %50 off',
-		'Secured payment with Stripe',
-		'Happy Earth Day'
-	];
+<script lang="ts">
+	// https://github.com/selemondev/svelte-marquee/tree/master
+	import { cn } from './utils.js';
+	type Direction = 'left' | 'up';
+	export let direction: Direction = 'left';
+	export let pauseOnHover: boolean = false;
+	export let reverse: boolean = false;
+	export let fade: boolean = false;
+	export let innerClassName: string = '';
+	export let numberOfCopies: number = 2;
 </script>
 
-<div class="relative max-w-[100vw] overflow-hidden bg-background py-4 text-base font-bold">
-	<div class="marquee relative flex select-none gap-10">
-		<ul class="marquee__content">
-			{#each items as item}
-				<li>{item}</li>
-			{/each}
-		</ul>
-
-		<ul class="marquee__content overflow-hidden" aria-hidden="true">
-			{#each items as item}
-				<li>{item}</li>
-			{/each}
-		</ul>
-	</div>
+<div
+	class={cn(`group flex gap-[1rem] overflow-hidden ${$$restProps.class}`, {
+		'flex-row': direction === 'left',
+		'flex-col': direction !== 'left'
+	})}
+	style={`mask-image: ${
+		fade
+			? `linear-gradient(${
+					direction === 'left' ? 'to right' : 'to bottom'
+				}, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
+			: 'none'
+	};
+	  -webkit-mask-image: ${
+			fade
+				? `linear-gradient(${
+						direction === 'left' ? 'to right' : 'to bottom'
+					}, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
+				: 'none'
+		};
+	  `}>
+	{#each Array(numberOfCopies).fill(0) as _, i (i)}
+		<div
+			class={cn(
+				'flex shrink-0 justify-around gap-[1rem] [--gap:1rem]',
+				direction === 'left' ? 'animate-marquee-left flex-row' : 'animate-marquee-up flex-col',
+				pauseOnHover && 'group-hover:[animation-play-state:paused]',
+				reverse && 'direction-reverse',
+				innerClassName
+			)}>
+			<slot />
+		</div>
+	{/each}
 </div>
-
-<style>
-	.marquee__content {
-		flex-shrink: 0;
-		display: flex;
-		justify-content: space-around;
-		gap: 40px;
-		animation: scroll 20s linear infinite;
-		animation-direction: reverse;
-	}
-
-	.marquee:hover .marquee__content {
-		animation-play-state: paused;
-	}
-
-	@keyframes scroll {
-		from {
-			transform: translateX(0);
-		}
-		to {
-			transform: translateX(calc(-100% - 40px));
-		}
-	}
-</style>

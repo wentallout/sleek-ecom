@@ -92,7 +92,7 @@
 		}
 	];
 
-	const autoplayPlugin = Autoplay({ delay: 1000, stopOnInteraction: true });
+	const autoplayPlugin = Autoplay({ delay: 5000, stopOnInteraction: true });
 </script>
 
 <Carousel.Root
