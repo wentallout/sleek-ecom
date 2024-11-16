@@ -1,8 +1,13 @@
 {
-	"workbench.colorCustomizations": {
-		"activityBar.background": "#000000",
-		"titleBar.activeBackground": "#000000",
-		"titleBar.activeForeground": "#FEFBFE"
-	},
-	"css.customData": [".vscode/tailwind.json"]
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#000000",
+    "titleBar.activeBackground": "#000000",
+    "titleBar.activeForeground": "#FEFBFE"
+  },
+  "css.customData": [
+    ".vscode/tailwind.json"
+  ],
+  "yaml.schemas": {
+    "https://schema.manifest.build/schema.json": "**/manifest/**/*.yml"
+  }
 }

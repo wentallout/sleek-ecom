@@ -23,11 +23,8 @@ import Dress from '$icons/nav/dress.svelte';
 import Lingerie from '$icons/nav/lingerie.svelte';
 
 import Sale from '$icons/nav/sale.svelte';
-
 import All from '$icons/nav/all.svelte';
-
 import Shorts from '$icons/nav/shorts.svelte';
-
 import Blazer from '$icons/nav/blazer.svelte';
 import Tshirt from '$icons/nav/tshirt.svelte';
 import Shirt from '$icons/nav/shirt.svelte';
@@ -40,7 +37,6 @@ import CaretDown from '~icons/ph/caret-down';
 import CaretUp from '~icons/ph/caret-up';
 import CaretRight from '~icons/ph/caret-right';
 import DotsThree from '~icons/ph/dots-three';
-
 import Sun from '~icons/ph/sun';
 import Moon from '~icons/ph/moon';
 import Warning from '~icons/ph/warning';

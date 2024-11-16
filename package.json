@@ -49,11 +49,13 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@mnfst/sdk": "^1.0.5",
 		"bits-ui": "^0.21.16",
 		"clsx": "^2.1.1",
 		"embla-carousel-svelte": "^8.3.1",
 		"formsnap": "^0.5.1",
 		"lucide-svelte": "^0.340.0",
+		"manifest": "^4.0.5",
 		"mode-watcher": "^0.2.2",
 		"sveltekit-superforms": "^2.20.1",
 		"tailwind-merge": "^2.5.4",

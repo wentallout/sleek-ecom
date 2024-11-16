@@ -59,6 +59,9 @@
 	import LoginForm from '$sections/account/login-form.svelte';
 	import type { LayoutServerData } from '../../../routes/$types';
 	import SleekLogo from '$images/sleek-logo.svelte';
+
+	import ThemeDropdown from '$components/theme/theme-switcher.svelte';
+	
 </script>
 
 <header class="glassy sticky top-0 z-50 mb-5 bg-background py-2 shadow-sm">
@@ -109,6 +112,8 @@
 					<ShoppingCart width="24" height="24" />
 				</Button>
 			</Drawer.Trigger>
+
+			<ThemeDropdown />
 		</div>
 	</div>
 	{#if isNavOpen}
