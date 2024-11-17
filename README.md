@@ -1,10 +1,13 @@
 # Sleek Ecom
 
 - Frontend of a minimal Ecommerce website
-- Backend: https://github.com/wentallout/sleek-manifest
+
 
 ## Test API
 
+- Backend Repository: https://github.com/wentallout/sleek-manifest
+- Backend Production (slow startup): https://sleek-manifest.onrender.com
+  
 ![api-product-test](https://github.com/user-attachments/assets/81b226ca-9b5b-4fd9-87ae-6f446ccbef16)
 
 
