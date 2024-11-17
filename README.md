@@ -1,33 +1,35 @@
 # Sleek Ecom
 
-Most complete, powerful ecommerce solution ever created. Powered by SvelteKit.
+- Frontend of a minimal Ecommerce website
+- Backend: https://github.com/wentallout/sleek-manifest
 
-## Icons
+## Test API
 
-Phosphor - Browse Collection: [https://icon-sets.iconify.design/ph]
+![api-product-test](https://github.com/user-attachments/assets/81b226ca-9b5b-4fd9-87ae-6f446ccbef16)
 
-## Auth
 
-https://supabase.com/docs/guides/auth/server-side/migrating-to-ssr-from-auth-helpers?framework=sveltekit
+## Project Structure
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+STEP 1:
+
+```bash
+npm install
+```
+
+STEP 2:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Form Validation
+## Tech
 
-https://www.okupter.com/blog/sveltekit-form-validation-with-zod
+- Phosphor Icons: [Icons](https://icon-sets.iconify.design/ph)
+- Form Validation: https://www.okupter.com/blog/sveltekit-form-validation-with-zod
 
+## Design System
 
-## Color theme
-
-Current color: #F9E5C9
-- https://zippystarter.com/tools/shadcn-ui-theme-generator
-- https://brandpalettes.com/apple-iphone-colors/
+- Color: https://zippystarter.com/tools/shadcn-ui-theme-generator
+- Spacing and Typography (use `clamp`): https://utopia.fyi/type/calculator/
